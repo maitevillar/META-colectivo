@@ -3,6 +3,7 @@
 	"version": "2.0.2",
 	"description": "Adalab web starter kit",
 	"dependencies": {
+		"blotter": "^2.1.0",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
 		"eslint": "^6.8.0",
