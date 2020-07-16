@@ -1,16 +1,8 @@
 .page__aside{
-    &--top{
-        height: 15vh;
-        background-color:  yellow;
-        color: white;
-        font-size: 40px;
-    }
+    background-color: black;
+    padding: 0px 50px 0px 50px;
+}
 
-    &--bottom{
-        height: 85vh;
-        background-color:  lightgoldenrodyellow;
-        color: black;
-        font-size: 20px;
-
-    }
+.section-2{
+    padding: 0px 0px 20px 0px;
 }

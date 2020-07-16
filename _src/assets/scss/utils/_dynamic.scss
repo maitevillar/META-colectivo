@@ -1,3 +1,44 @@
-// .hidden{
-//     display: none;
-// }
+.collapsable{
+    height: 15vh;
+    background-color: black;
+    border-top: white solid 1px;
+    padding-top: 15px;
+    color: white;
+    font-family: $titleFont;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 30px;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.active, .collapsable:hover {
+    font-family: $subtitleFont;
+    font-style: italic;
+    text-transform: capitalize;
+  }
+
+.content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+   
+    height: 100vh;
+    color: whitesmoke;
+    font-size: 20px;
+    // border: 1px solid whitesmoke;
+}
+
+
+.highlight {
+    font-family: $subtitleFont;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.hl__date{
+    font-family: $subtitleFont;
+    font-weight: 600;
+    font-size: 16px;
+}

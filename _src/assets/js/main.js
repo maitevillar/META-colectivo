@@ -58,15 +58,22 @@ console.log('>> Ready :)');
 );
 
 
-// DOM elements calling
+// COLLAPSABLE
 
-const mainTop =document.querySelector('.page__main--top')
-const mainBottom = document.querySelector('.page__main--bottom')
-const elem = document.querySelector('.distortion-text');
+var coll = document.getElementsByClassName("collapsable");
+var i;
 
-function hideBottom(){
-    mainBottom.classList.add(".hidden")
-    console.log(mainBottom)
+for (i = 0; i < coll.length; i++) {
+
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
 }
 
 //COLOR
@@ -106,12 +113,12 @@ function colorGradient(fadeFraction, rgbColor1, rgbColor2, rgbColor3) {
 
 // BLOTTER - apply effect
 
+const elem = document.querySelector('.distortion-text');
+
 var text = new Blotter.Text("META", {
     family : "helvetica",
-    size : 200,
-    fill : '#171717',
-    paddingLeft : 40,
-    paddingRight : 40
+    size : 400,
+    fill : '#ffffff',
   });
   
   var material = new Blotter.LiquidDistortMaterial();
